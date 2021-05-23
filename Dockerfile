@@ -3,6 +3,7 @@ FROM shari18/php:latest
 
 # Download and install NodeJS
 ADD install-node.sh /usr/sbin/install-node.sh
+RUN ["chmod", "+x", "/usr/sbin/install-node.sh"]
 RUN /usr/sbin/install-node.sh
 
 WORKDIR /var/www
